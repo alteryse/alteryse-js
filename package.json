@@ -1,0 +1,57 @@
+{
+	"name": "alteryse",
+	"version": "0.0.4",
+	"author": "Alteryse",
+	"license": "MIT",
+	"main": "dist/index.cjs",
+	"module": "dist/index.mjs",
+	"types": "dist/index.d.ts",
+	"exports": {
+		".": {
+			"require": "./dist/index.cjs",
+			"import": "./dist/index.mjs",
+			"types": "./dist/index.d.ts"
+		},
+		"./*": "./*"
+	},
+	"scripts": {
+		"lint": "eslint ./src/*",
+		"build": "unbuild"
+	},
+	"homepage": "https://github.com/alteryse/alteryse-js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/alteryse/alteryse-js.git"
+	},
+	"devDependencies": {
+		"@swc/core": "^1.3.14",
+		"@typescript-eslint/eslint-plugin": "^5.42.1",
+		"@typescript-eslint/parser": "^5.42.1",
+		"eslint": "^8.29.0",
+		"typescript": "^5.3.2",
+		"unbuild": "^2.0.0"
+	},
+	"dependencies": {
+		"axios": "^1.7.7"
+	},
+	"prettier": {
+		"$schema": "http://json.schemastore.org/prettierrc",
+		"endOfLine": "lf",
+		"printWidth": 200,
+		"quoteProps": "as-needed",
+		"semi": true,
+		"singleQuote": true,
+		"tabWidth": 4,
+		"trailingComma": "none",
+		"useTabs": true,
+		"overrides": [
+			{
+				"files": "*.yml",
+				"options": {
+					"tabWidth": 2,
+					"useTabs": false
+				}
+			}
+		]
+	}
+}
